@@ -254,7 +254,7 @@ const specialOffers = [
 export function Ecom() {
   // const router = useRouter()
   const navigate = useNavigate();
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [cartItems, setCartItems] = useState([]);
   const [favorites, setFavorites] = useState([]);
@@ -438,12 +438,17 @@ export function Ecom() {
           <SidebarLink
             icon={<HeartHandshake size={20} />}
             label="ShareJoy"
-            onClick={() => navigate("/")}
+            onClick={() => window.open("https://padforward.us/", "_blank")}
           />
           <SidebarLink
             icon={<Handshake size={20} />}
             label="NGO's"
-            onClick={() => navigate("/")}
+            onClick={() =>
+              window.open(
+                "https://www.hercircle.in/engage/wellness/reproductive-health/5-organisations-working-towards-eradicating-period-poverty-2239.html",
+                "_blank"
+              )
+            }
           />
         </nav>
       </aside>

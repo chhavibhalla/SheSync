@@ -404,12 +404,17 @@ export function Dashboard() {
             <NavItem
               icon={<HeartHandshake size={20} />}
               label="ShareJoy"
-              onClick={() => navigate("/")}
+              onClick={() => window.open("https://padforward.us/", "_blank")}
             />
             <NavItem
               icon={<Handshake size={20} />}
               label="NGO's"
-              onClick={() => navigate("/")}
+              onClick={() =>
+                window.open(
+                  "https://www.hercircle.in/engage/wellness/reproductive-health/5-organisations-working-towards-eradicating-period-poverty-2239.html",
+                  "_blank"
+                )
+              }
             />
           </ul>
         </nav>

@@ -44,7 +44,14 @@ import { Quiz } from "./Quiz";
 const blogPosts = [
   {
     id: 1,
-    title: "Understanding Your Menstrual Cycle",
+    title: (
+      <a
+        className="text-pink-600"
+        href="https://youtu.be/7HlHGLr1hTA?si=mP2SIqz85Emga8od"
+      >
+        "Understanding Your Menstrual Cycle"
+      </a>
+    ),
     excerpt:
       "Learn about the phases of your menstrual cycle and how they affect your body.",
     author: "Dr. Janvi Gupta",
@@ -57,7 +64,14 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "How long does the menstrual cycle and period last?",
+    title: (
+      <a
+        className="text-pink-600"
+        href="https://youtu.be/kQyByK9XaQg?si=fz0az0Hz4fizD3_B"
+      >
+        "How long does the menstrual cycle and period last?"
+      </a>
+    ),
     excerpt:
       "Discover the best foods to eat during your menstrual cycle for optimal health.",
     author: "Nutritionist Sachin Rai",
@@ -70,7 +84,14 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "What are the signs that my period is coming?",
+    title: (
+      <a
+        className="text-pink-600"
+        href="https://youtu.be/kQyByK9XaQg?si=fz0az0Hz4fizD3_B"
+      >
+        "What are the signs that my period is coming?"
+      </a>
+    ),
     excerpt:
       "Explore natural remedies and lifestyle changes to alleviate PMS symptoms.",
     author: "Holistic Health Coach Namita Arora",
@@ -80,10 +101,18 @@ const blogPosts = [
     category: "Wellness",
     content:
       "If you’ve never had a period before, there are some signs which might indicate your period is coming and they’re all natural parts of growing up. If you’ve noticed your boobs are beginning to develop, and you’ve started to grow pubic hair, then you could expect to get your period about two years later. A more immediate sign for some people is if you notice discharge in your pants. Discharge is a white or yellowish fluid which usually shows up a few months before your first period. There are lots of other signs your period is coming and these can be both physical and emotional. We call these signs PMS (premenstrual syndrome). Not everyone gets PMS and we all experience it differently. It usually happens just before and during your period, and it’s basically the reason you might find yourself wanting to eat your body weight in chocolate or burst into tears at the smallest of things…lost sock, bad hair day, burnt toast…trust me, we all have those days! PMS brings with it all kinds of symptoms such as headaches, bloating, cramps, mood swings, feeling tired and having trouble concentrating. We’ve got a great blog all about PMS with top tips on how to help with these symptoms and many more, so go and take a look. It will finally explain some of those weird and wonderful feelings that you never knew were thanks to your bloody brilliant period!",
+    className: "blog-post-3",
   },
   {
     id: 4,
-    title: "Why does the colour vary so much?",
+    title: (
+      <a
+        className="text-pink-600"
+        href="https://youtu.be/NM2fnDJf_RA?si=1bfSJA_GNW8LCktL"
+      >
+        "Why does the colour vary so much?"
+      </a>
+    ),
     excerpt:
       "A journey through time exploring the evolution of menstrual products.",
     author: "Historian Dr. Ayesha Khan",
@@ -96,7 +125,14 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: "Pain and WHAT IS NORMAL?",
+    title: (
+      <a
+        className="text-pink-600"
+        href="https://youtube.com/watch?v=5u6Y6ZP2_Wg&t=0&feature=shared"
+      >
+        "Pain and WHAT IS NORMAL?"
+      </a>
+    ),
     excerpt:
       "Learn how to optimize your workouts based on your menstrual cycle phases.",
     author: "Fitness Expert Vaibhavi Jain",
@@ -109,7 +145,14 @@ const blogPosts = [
   },
   {
     id: 6,
-    title: "Hormones and Mental Health",
+    title: (
+      <a
+        className="text-pink-600"
+        href="https://youtube.com/watch?v=5u6Y6ZP2_Wg&feature=shared"
+      >
+        "Hormones and Mental Health"
+      </a>
+    ),
     excerpt:
       "Understand the connection between hormonal changes and mental well-being.",
     author: "Psychologist Dr. Richa Malhotra",
@@ -122,7 +165,14 @@ const blogPosts = [
   },
   {
     id: 7,
-    title: "Menstrual Hygiene Best Practices",
+    title: (
+      <a
+        className="text-pink-600"
+        href="https://youtu.be/GVRDGQhoEYQ?si=lCe3rA71seWpGjd_"
+      >
+        "Menstrual Hygiene Best Practices"
+      </a>
+    ),
     excerpt:
       "Essential tips for maintaining proper menstrual hygiene and preventing infections.",
     author: "Gynecologist Dr. Siya Choudhary",
@@ -135,7 +185,14 @@ const blogPosts = [
   },
   {
     id: 8,
-    title: "Hormonal Birth Control Options",
+    title: (
+      <a
+        className="text-pink-600"
+        href="https://youtu.be/UBhiwkM8MIY?si=GsACG7mZKkQ2VPYP"
+      >
+        "Hormonal Birth Control Options"
+      </a>
+    ),
     excerpt:
       "An overview of different hormonal contraceptive methods and their effects on your cycle.",
     author: " Dr. Manisha Agarwal ",
@@ -148,7 +205,14 @@ const blogPosts = [
   },
   {
     id: 9,
-    title: "Menstrual Disorders: When to Seek Help",
+    title: (
+      <a
+        className="text-pink-600"
+        href="https://youtu.be/C3ttfI5YxvE?si=1wF58Pj_cmgLXf-7"
+      >
+        "Menstrual Disorders: When to Seek Help"
+      </a>
+    ),
     excerpt:
       "Learn about common menstrual disorders and signs that indicate you should consult a doctor.",
     author: "Obstetrician Dr. Hazel ",
@@ -345,12 +409,17 @@ export function Blogs() {
           <SidebarLink
             icon={<HeartHandshake size={20} />}
             label="ShareJoy"
-            onClick={() => navigate("/")}
+            onClick={() => window.open("https://padforward.us/", "_blank")}
           />
           <SidebarLink
             icon={<Handshake size={20} />}
             label="NGO's"
-            onClick={() => navigate("/")}
+            onClick={() =>
+              window.open(
+                "https://www.hercircle.in/engage/wellness/reproductive-health/5-organisations-working-towards-eradicating-period-poverty-2239.html",
+                "_blank"
+              )
+            }
           />
         </nav>
       </aside>
@@ -395,6 +464,7 @@ export function Blogs() {
               Read More
             </button>
           </div>
+
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <div className="relative flex-grow text-white">
               <input
@@ -421,83 +491,6 @@ export function Blogs() {
             </select>
           </div>
           {/* Trophy System */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center shadow-lg transform hover:scale-105 transition-all duration-300">
-            <h2 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 dark:from-pink-400 dark:to-purple-400 mb-4">
-              Your Learning Journey
-            </h2>
-            <div className="flex flex-col space-y-4">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                  Articles Read
-                </h3>
-                <div className="flex justify-center gap-4">
-                  {[...Array(9)].map((_, index) => (
-                    <BookOpen
-                      key={index}
-                      className={`h-8 w-8 transition-all duration-300 ${
-                        index < completedBlogs
-                          ? "text-pink-500 scale-110"
-                          : "text-gray-300 dark:text-gray-600"
-                      }`}
-                      fill={index < completedBlogs ? "currentColor" : "none"}
-                    />
-                  ))}
-                </div>
-                <p className="mt-2 text-gray-800 dark:text-gray-300">
-                  {completedBlogs} out of 9 articles read
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                  Topics Completed
-                </h3>
-                <div className="flex justify-center gap-4">
-                  {[...Array(5)].map((_, index) => (
-                    <GraduationCap
-                      key={index}
-                      className={`h-8 w-8 transition-all duration-300 ${
-                        index < completedTopics
-                          ? "text-purple-500 scale-110"
-                          : "text-gray-300 dark:text-gray-600"
-                      }`}
-                      fill={index < completedTopics ? "currentColor" : "none"}
-                    />
-                  ))}
-                </div>
-                <p className="mt-2 text-gray-800 dark:text-gray-300">
-                  {completedTopics} out of 5 topics completed
-                </p>
-              </div>
-              {quizScore !== null && (
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                    Quiz Score
-                  </h3>
-                  <div className="flex justify-center items-center">
-                    <Award
-                      className={`h-12 w-12 ${
-                        quizScore === 3
-                          ? "text-yellow-500"
-                          : quizScore === 2
-                          ? "text-gray-400"
-                          : "text-bronze-500"
-                      }`}
-                    />
-                    <span className="ml-2 text-2xl font-bold">
-                      {quizScore}/3
-                    </span>
-                  </div>
-                  <p className="mt-2 text-gray-800 dark:text-gray-300">
-                    {quizScore === 3
-                      ? "Perfect score!"
-                      : quizScore === 2
-                      ? "Great job!"
-                      : "Keep learning!"}
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
           {/* Blog Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredPosts.map((post) => (
