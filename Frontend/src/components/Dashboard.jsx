@@ -769,7 +769,7 @@ export function Dashboard() {
 const NavItem = ({ icon, label, onClick, active = false }) => {
   return (
     <button
-      onClick={() => navigate(path)}
+      onClick={onClick}
       className={`flex items-center space-x-2 w-full px-2 py-2 rounded-lg transition-colors ${
         active
           ? "bg-pink-200 dark:bg-pink-900 text-pink-800 dark:text-pink-200"
