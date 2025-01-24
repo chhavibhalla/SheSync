@@ -15,7 +15,7 @@ import {
   Moon,
   ArrowLeft,
   Plus,
-  Handshake ,
+  Handshake,
   Minus,
   Info,
   LayoutDashboard,
@@ -594,6 +594,7 @@ export function SymptomAnalysis() {
             icon={<HeartPulse size={20} />}
             label="HealthLens"
             onClick={() => navigate("/symptomsanalyzer")}
+            active
           />
           <SidebarLink
             icon={<MessageSquare size={20} />}
@@ -606,10 +607,10 @@ export function SymptomAnalysis() {
             onClick={() => navigate("/")}
           />
           <SidebarLink
-                      icon={<Handshake  size={20} />}
-                      label="NGO's"
-                      onClick={() => navigate("/")}
-                    />
+            icon={<Handshake size={20} />}
+            label="NGO's"
+            onClick={() => navigate("/")}
+          />
         </div>
       </aside>
 

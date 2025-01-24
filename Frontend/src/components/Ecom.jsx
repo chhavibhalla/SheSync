@@ -39,7 +39,7 @@ import {
   Calendar,
   Coffee,
   Pill,
-  Handshake ,
+  Handshake,
   Bath,
   Wind,
   ThermometerSun,
@@ -384,7 +384,7 @@ export function Ecom() {
 
   return (
     <div className={`flex h-screen ${darkMode ? "dark" : ""}`}>
-      <aside className="bg-white dark:bg-gray-800 w-64 min-h-screen p-4">
+      <aside className="bg-pink-100 dark:bg-gray-800 w-64 min-h-screen p-4">
         <nav className="mt-8 space-y-4">
           <h1 className="text-2xl font-bold text-pink-600 dark:text-pink-400 mb-8">
             SheSync
@@ -441,7 +441,7 @@ export function Ecom() {
             onClick={() => navigate("/")}
           />
           <SidebarLink
-            icon={<Handshake  size={20} />}
+            icon={<Handshake size={20} />}
             label="NGO's"
             onClick={() => navigate("/")}
           />

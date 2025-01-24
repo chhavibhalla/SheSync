@@ -11,7 +11,7 @@ import {
   Coffee,
   Zap,
   Moon,
-  Handshake ,
+  Handshake,
   ChevronDown,
   ChevronUp,
   Heart,
@@ -291,7 +291,7 @@ export function Blogs() {
   return (
     <div className={`flex h-screen ${darkMode ? "dark" : ""}`}>
       {/* Sidebar */}
-      <aside className="bg-white dark:bg-gray-800 w-64 min-h-screen p-4">
+      <aside className="bg-pink-100 dark:bg-gray-800 w-64 min-h-screen p-4">
         <nav className="mt-8 space-y-4">
           <h1 className="text-2xl font-bold text-pink-600 dark:text-pink-400 mb-8">
             SheSync
@@ -346,10 +346,9 @@ export function Blogs() {
             icon={<HeartHandshake size={20} />}
             label="ShareJoy"
             onClick={() => navigate("/")}
-            active
           />
           <SidebarLink
-            icon={<Handshake  size={20} />}
+            icon={<Handshake size={20} />}
             label="NGO's"
             onClick={() => navigate("/")}
           />

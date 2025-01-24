@@ -18,7 +18,7 @@ import {
   Moon,
   Sun,
   Droplet,
-  Handshake ,
+  Handshake,
   Utensils,
   Smile,
   Frown,
@@ -348,19 +348,18 @@ export function Dashboard() {
         }
       `}</style>
       <aside
-        className={`w-[240px] bg-[rgb(var(--card))] p-6 flex flex-col transition-all duration-300 ease-in-out ${
+        className={`w-[240px] bg-pink-100 p-6 flex flex-col transition-all duration-300 ease-in-out ${
           sidebarVisible ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <h1 className="text-xl font-semibold text-[rgb(var(--primary))] mb-6">
-          SheSync
-        </h1>
+        <h1 className="text-xl font-semibold text-pink-600 mb-6">SheSync</h1>
         <nav className="flex-1">
           <ul className="space-y-2">
             <NavItem
               icon={<LayoutDashboard size={20} />}
               label="Dashboard"
               onClick={() => navigate("/dashboard")}
+              active
             />
             <NavItem
               icon={<Home size={20} />}
@@ -401,7 +400,6 @@ export function Dashboard() {
               icon={<MessageSquare size={20} />}
               label="Forums"
               onClick={() => navigate("/forums")}
-              active
             />
             <NavItem
               icon={<HeartHandshake size={20} />}
@@ -409,16 +407,16 @@ export function Dashboard() {
               onClick={() => navigate("/")}
             />
             <NavItem
-            icon={<Handshake  size={20} />}
-            label="NGO's"
-            onClick={() => navigate("/")}
-          />
+              icon={<Handshake size={20} />}
+              label="NGO's"
+              onClick={() => navigate("/")}
+            />
           </ul>
         </nav>
         <div className="pt-6 mt-6 border-t border-[rgba(var(--foreground),0.1)]">
           <div className="flex items-center">
             <div className="w-8 h-8 rounded-half bg-[rgba(var(--foreground),0.1)] flex items-center justify-center text-sm font-medium">
-            ☮️
+              ☮️
             </div>
             <div className="ml-3">
               <p className="text-sm font-medium">SheSync🎗️</p>
@@ -434,27 +432,7 @@ export function Dashboard() {
         </div>
       </aside>
 
-      <button
-        onClick={toggleSidebar}
-        className="fixed left-0 top-4 z-10 p-2 bg-[rgb(var(--primary))] text-white rounded-r-md transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[rgb(var(--primary))] focus:ring-opacity-50"
-        style={{
-          transform: sidebarVisible ? "translateX(256px)" : "translateX(0)",
-        }}
-        aria-label={sidebarVisible ? "Hide sidebar" : "Show sidebar"}
-      >
-        <ChevronRight
-          size={24}
-          className={`transition-transform duration-300 ${
-            sidebarVisible ? "rotate-180" : "rotate-0"
-          }`}
-        />
-      </button>
-
-      <main
-        className={`flex-1 p-6 overflow-auto bg-[rgb(var(--background))] transition-all duration-300 ease-in-out ${
-          sidebarVisible ? "ml-[240px]" : "ml-0"
-        }`}
-      >
+      <main className="flex-1 overflow-auto bg-[rgb(var(--background))] transition-all duration-300 ease-in-out ">
         <div className="max-w-6xl mx-auto space-y-6">
           {error && (
             <div
@@ -790,23 +768,17 @@ export function Dashboard() {
 
 const NavItem = ({ icon, label, onClick, active = false }) => {
   return (
-    <li>
-      <a
-        href="#"
-        onClick={(e) => {
-          e.preventDefault();
-          onClick();
-        }}
-        className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
-          active
-            ? "bg-[rgba(var(--primary),0.1)] text-[rgb(var(--primary))]"
-            : "text-[rgb(var(--muted-foreground))] hover:bg-[rgba(var(--foreground),0.05)]"
-        }`}
-      >
-        {icon}
-        {label}
-      </a>
-    </li>
+    <button
+      onClick={() => navigate(path)}
+      className={`flex items-center space-x-2 w-full px-2 py-2 rounded-lg transition-colors ${
+        active
+          ? "bg-pink-200 dark:bg-pink-900 text-pink-800 dark:text-pink-200"
+          : "text-gray-900 dark:text-gray-300 hover:bg-pink-100 dark:hover:bg-gray-700"
+      }`}
+    >
+      {icon}
+      <span>{label}</span>
+    </button>
   );
 };
 
